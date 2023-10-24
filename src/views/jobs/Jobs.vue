@@ -16,11 +16,18 @@ export default {
   data() {
     return {
       jobs: [
-        {title:"web" , id:1 , details: "lorem" },
-        {title:"design" , id:2 , details: "lorem" },
-        {title: "UI", id:3 , details: "lorem"  }
+        // {title:"web" , id:1 , details: "lorem" },
+        // {title:"design" , id:2 , details: "lorem" },
+        // {title: "UI", id:3 , details: "lorem"  }
      ]
    }
+  },
+  mounted() {
+    //asynchrones -- promes
+    fetch('http://localhost:5000/jobs')
+      .then((res) => res.json()) // this is an callback fun === async
+      .then(data => this.jobs = data)
+      .catch( e=> console.log(e.message ) )
   }
   
 }
