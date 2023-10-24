@@ -1,0 +1,9 @@
+{
+
+ "jobs": [
+        {"title":"web" , "id":1 , "details": "lorem" },
+        {"title":"design" , "id":2 , "details": "lorem" },
+        {"title": "UI", "id":3 , "details": "lorem"  }
+     ]
+
+}
